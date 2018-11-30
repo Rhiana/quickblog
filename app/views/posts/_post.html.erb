@@ -1,3 +1,4 @@
-  <h2><%= link_to_unless_current post.title, post %></h2>
+<section class="container with-title">
+  <h2 class="title"><%= link_to_unless_current post.title, post %></h2>
   <%= simple_format post.body %>
-
+</section>

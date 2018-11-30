@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "input" %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "input" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create", class: "btn is-primary" %>
   </div>
 <% end %>

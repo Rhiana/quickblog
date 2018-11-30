@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" role="notice"><%= notice %></p>
 
-<%= render :partial => @post %>
+<%= render partial: @post %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<section class="container is-dark with-title">
+	<h3 class="title">Actions</h3>
+	<div>
+		<%= link_to 'Edit', edit_post_path(@post), class: "btn is-success" %>
+		<%= link_to 'Back', posts_path, class: "btn is-warning" %>
+	</div>
+</section>
 
-<h2>Comments</h2>
-<div id="comments">
-	<%= render :partial => @post.comments %>
-</div>
+<section class="container with-title">
+	<h2 class="title">Comments</h2>
+	<div id="comments">
+		<%= render partial: @post.comments %>
+	</div>
 
-<%= form_for [@post, Comment.new], :remote => true do |f| %>
-	<p>
-		<%= f.label :body, "New Comment" %><br/>
-		<%= f.text_area :body %>
-	</p>
-	<p><%= f.submit "Add Comment" %></p>
-<% end %>
+	<%= form_for [@post, Comment.new], remote: true do |f| %>
+		<p>
+			<%= f.label :body, "New Comment" %><br/>
+			<%= f.text_area :body, class: "input" %>
+		</p>
+		<div><%= f.submit "Add Comment", class: "btn is-primary" %></div>
+	<% end %>
+</section>

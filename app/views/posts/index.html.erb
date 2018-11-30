@@ -1,5 +1,7 @@
-<h1>Listing posts</h1>
+<header>
+  <h1>Listing posts</h1>
+</header>
 
-<%= render :partial => @posts %>
+<%= render partial: @posts %>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "btn is-primary" %>

@@ -1,6 +1,13 @@
-<h1>Editing post</h1>
+<section class="container with-title">
+  <h1 class="title">Editing post</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+</section>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<section class="container is-dark with-title">
+	<h3 class="title">Actions</h3>
+	<div>
+    <%= link_to 'Show', @post, class: "btn is-success" %>
+    <%= link_to 'Back', posts_path, class: "btn is-warning" %>
+  </div>
+</section>
