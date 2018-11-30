@@ -1,0 +1,31 @@
+.main-header {
+  background-color: $black;
+  padding: 10px 0;
+  nav {
+    @include container;
+    color: $white;
+  }
+}
+
+.github-link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  height: 100px;
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  > p.balloon {
+    align-self: flex-start;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    color: #333;
+  }
+  > i.octocat {
+    align-self: flex-end;
+  }
+}
