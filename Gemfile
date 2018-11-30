@@ -7,6 +7,9 @@ gem "sprockets", ">= 2.12.5"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Use devise for authentication
+gem 'devise'
+
 group :development, :test do
 	gem 'sqlite3'
 end
