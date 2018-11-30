@@ -1,0 +1,13 @@
+.alert {
+  padding: 5px 0;
+  &-danger {
+    background-color: $red;
+  }
+  &-success {
+    background-color: $green;
+  }
+  p {
+    @include container;
+    color: $white;
+  }
+}
