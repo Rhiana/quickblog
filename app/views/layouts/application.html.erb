@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>QuickBlog</title>
-  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= auto_discovery_link_tag(:atom, posts_path(:atom)) %>
-</head>
-<body>
-  <main>
-    <%= yield %>
-  </main>
+  <head>
+    <title>QuickBlog</title>
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= auto_discovery_link_tag(:atom, posts_path(:atom)) %>
+  </head>
+  <body>
+    <%= render "layouts/header" %>
 
-</body>
+    <main>
+      <%= yield %>
+    </main>
+
+  </body>
 </html>
