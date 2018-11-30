@@ -10,6 +10,10 @@ gem "sprockets", ">= 2.12.5"
 # Use devise for authentication
 gem 'devise'
 
+group :test do
+  gem 'capybara'
+end
+
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
